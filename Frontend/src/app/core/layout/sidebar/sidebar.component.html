@@ -1,0 +1,20 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <a routerLink="/dashboard" class="brand-link">
+        <img src="assets/logo.png" class="brand-image ms-2">
+    <span class="brand-text font-weight-light ms-2">kawsuayni❤️</span>
+  </a>
+  <div class="sidebar">
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu">
+        @for (item of menuItems; track item.route) {
+          <li class="nav-item">
+            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.route === '/dashboard' }" class="nav-link">
+              <i class="nav-icon bi {{ item.icon }}"></i>
+              <p>{{ item.label }}</p>
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</aside>
