@@ -32,6 +32,7 @@ class Actividad {
         return ["resultado"=>"OK","mensaje"=>"Actividad insertada"];
     }
 
+    
     // ✏️ EDITAR
     public function editar($id, $params){
         $sql = "UPDATE actividades 
